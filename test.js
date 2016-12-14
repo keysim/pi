@@ -1,4 +1,4 @@
-var exec = require('exec');
+var exec = require('child_process').execFile;
 
 exec(['gpio', 'write', '1', '1'], function(err, out, code) {
     if (err instanceof Error)
