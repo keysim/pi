@@ -1,14 +1,9 @@
-const spawn = require('child_process').spawn;
-const ls = spawn('ls', ['-lh', '/usr']);
+var exec = require('exec');
 
-ls.stdout.on('data', function (data) {
-    console.log('stdout: ${data}');
-});
-
-ls.stderr.on('data', function (data) {
-    console.log('stderr: ${data}');
-});
-
-ls.on('close', function(code) {
-    console.log('child process exited with code ${code}');
+exec(['ls', '-lha'], function(err, out, code) {
+    if (err instanceof Error)
+        throw err;
+    process.stderr.write(err);
+    process.stdout.write(out);
+    process.exit(code);
 });

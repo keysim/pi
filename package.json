@@ -1,0 +1,28 @@
+{
+  "name": "pi",
+  "version": "1.0.0",
+  "description": "tests",
+  "main": "test.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/keysim/pi.git"
+  },
+  "keywords": [
+    "pi",
+    "orange_pi",
+    "orange",
+    "gpio"
+  ],
+  "author": "keysim",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/keysim/pi/issues"
+  },
+  "homepage": "https://github.com/keysim/pi#readme",
+  "dependencies": {
+    "exec": "^0.2.1"
+  }
+}
