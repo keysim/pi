@@ -3,6 +3,8 @@ var exec = require('child_process').exec;
 
 var visits = 0;
 var light = false;
+exec('gpio mode 1 out', function(error, stdout, stderr) {
+});
 http.createServer(function (req, res) {
     res.writeHead(200, {'Content-Type': 'text/plain'});
 
