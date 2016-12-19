@@ -1,2 +1,2 @@
 # pi
-Orange pi tests
+Raspberry pi tests
