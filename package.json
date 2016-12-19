@@ -23,7 +23,6 @@
   },
   "homepage": "https://github.com/keysim/pi#readme",
   "dependencies": {
-    "exec": "^0.2.1",
     "serialport": "^4.0.7"
   }
 }
