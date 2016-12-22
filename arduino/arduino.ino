@@ -14,9 +14,9 @@ const int ledPin = 13;
 void light(int n){
   for (int i = 0; i < n; i++) {
     digitalWrite(ledPin, HIGH);
-    delay(100);
+    delay(500);
     digitalWrite(ledPin, LOW);
-    delay(100);
+    delay(500);
   }
 }
 

@@ -8,7 +8,7 @@ port.on('data', function (data) {
 });
 
 port.on('open', function() {
-    port.write('10', function(err) {
+    port.write('9', function(err) {
         if (err) {
             return console.log('Error on write: ', err.message);
         }
