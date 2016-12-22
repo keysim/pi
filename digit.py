@@ -14,4 +14,7 @@ while 1 :
     ser.write(c.encode('ascii'))
     time.sleep(.7)
   ser.write(".".encode('ascii'))
+  ni.ifaddresses('eth0')
+  ip = ni.ifaddresses('eth0')[2][0]['addr']
+  print(ip)
   time.sleep(2)

@@ -74,10 +74,7 @@ void loop()
     disp.writeDigit(number);
   }
   else if(number + '0' == '.') {
-    if (flag==0){ 
-      flag=1;
-      disp.write(' ');
-    }
+    disp.write(' ');
   }
 }
 
