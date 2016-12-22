@@ -12,4 +12,4 @@ print(ip)  # should print "192.168.100.37"
 while 1 :
   for c in ip:
     time.sleep(1)
-    ser.write("3".encode('ascii'))
+    ser.write(c.encode('ascii'))
