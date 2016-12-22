@@ -11,4 +11,4 @@ print(ip)  # should print "192.168.100.37"
 
 while 1 :
   time.sleep(1)
-  ser.write(serialcmd.encode("3"))
+  ser.write("3".encode('ascii'))
