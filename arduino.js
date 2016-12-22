@@ -6,3 +6,12 @@ var port = new SerialPort("/dev/ttyUSB0", {
 port.on('data', function (data) {
     console.log('Data: ' + data);
 });
+
+port.on('open', function() {
+    port.write('3', function(err) {
+        if (err) {
+            return console.log('Error on write: ', err.message);
+        }
+        console.log('message written');
+    });
+});
