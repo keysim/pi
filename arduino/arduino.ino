@@ -59,7 +59,7 @@ void setup() {
   disp.setCommonCathode();
   //Control brightness (values 0-100);
   disp.setDutyCycle(20);
-  
+  disp.write(' ');
 }
 
 void loop()
@@ -73,11 +73,10 @@ void loop()
   if (number>=0 && number<=9){
     disp.writeDigit(number);
   }
-  else if(number + '0' == ' ') {
+  else if(number + '0' == '.') {
     if (flag==0){ 
       flag=1;
       disp.write(' ');
-      //disp.clearDisp();
     }
   }
 }
