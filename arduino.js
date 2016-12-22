@@ -7,7 +7,7 @@ port.on('data', function (data) {
     console.log('Data: ' + data);
 });
 
-port.write('9', function(err) {
+port.write('5', function(err) {
     if (err) {
         return console.log('Error on write: ', err.message);
     }
