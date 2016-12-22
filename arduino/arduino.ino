@@ -64,13 +64,17 @@ void setup() {
 
 void loop()
 {
-  disp.writeDigit(5);
-  delay(500);
+  //disp.writeDigit(5);
+  //delay(500);
+  //Serial.print("Hello Pi");
+  //delay(1000);
   //Check if incoming data is available:
-  /*if (Serial.available() > 0)
+  if (Serial.available() > 0)
   {
   // If it is, we'll use parseInt() to pull out only numbers:
-    number = Serial.parseInt();
+    number = Serial.read() - '0';
+    if (number>=1 && number<=9)
+      Serial.println(number);
     flag=0;
   }
 
@@ -80,10 +84,10 @@ void loop()
     //Print message to serial monito only once
     if (flag==0){ 
       //Print number to serial monitor
-      Serial.print("Number on 7 segment display:");
-      Serial.println(number);
+      //Serial.print("Number on 7 segment display:");
+      //Serial.println(number);
       flag=1;
     }
-  }*/
+  }
 }
 
