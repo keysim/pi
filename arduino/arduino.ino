@@ -63,27 +63,27 @@ void setup() {
 }
 
 void loop()
-{	
-	//Check if incoming data is available:
-    if (Serial.available() > 0)
-    {
-      // If it is, we'll use parseInt() to pull out only numbers:
-      number = Serial.parseInt();
-      flag=0;
-    }
+{
+  disp.writeDigit(5);
+  delay(500);
+  //Check if incoming data is available:
+  /*if (Serial.available() > 0)
+  {
+  // If it is, we'll use parseInt() to pull out only numbers:
+    number = Serial.parseInt();
+    flag=0;
+  }
 
-	//Valid range is from 1 to 9
-	if (number>=1 && number<=9){
-		//Print number to 7 segment display
-		disp.writeDigit(number);
-		
-	    //Print message to serial monito only once
-	    if (flag==0){ 
-	    	//Print number to serial monitor
-	    	Serial.print("Number on 7 segment display:");
-	    	Serial.println(number);
-	    	flag=1;
-	    }
-	}
+  //Valid range is from 1 to 9
+  if (number>=1 && number<=9){//Print number to 7 segment display
+    disp.writeDigit(number);
+    //Print message to serial monito only once
+    if (flag==0){ 
+      //Print number to serial monitor
+      Serial.print("Number on 7 segment display:");
+      Serial.println(number);
+      flag=1;
+    }
+  }*/
 }
 
