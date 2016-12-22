@@ -4,7 +4,7 @@ import serial
 
 ser = serial.Serial('/dev/ttyUSB0', 9600)
 
-addr = $(hostname -I)
+addr = "$(hostname -I)"
 
 print(addr)
 
