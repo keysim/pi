@@ -73,8 +73,8 @@ void loop()
   {
   // If it is, we'll use parseInt() to pull out only numbers:
     number = Serial.read() - '0';
-    if (number>=1 && number<=9)
-      Serial.println(number);
+    //if (number>=1 && number<=9)
+    Serial.println(number);
     flag=0;
   }
 

@@ -8,10 +8,12 @@ port.on('data', function (data) {
 });
 
 port.on('open', function() {
-    port.write('5', function(err) {
-        if (err) {
-            return console.log('Error on write: ', err.message);
-        }
-        console.log('message written');
-    });
+    setInterval(function() {
+        port.write('5', function(err) {
+            if (err) {
+                return console.log('Error on write: ', err.message);
+            }
+            console.log('message written');
+        });
+    }, 2000);
 });
