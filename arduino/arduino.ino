@@ -58,35 +58,26 @@ void setup() {
   //Only for common cathode 7segments
   disp.setCommonCathode();
   //Control brightness (values 0-100);
-  disp.setDutyCycle(50);
+  disp.setDutyCycle(20);
   
 }
 
 void loop()
 {
-  //disp.writeDigit(5);
-  //delay(500);
-  //Serial.print("Hello Pi");
-  //delay(1000);
-  //Check if incoming data is available:
-  if (Serial.available() > 0)
-  {
-  // If it is, we'll use parseInt() to pull out only numbers:
+  if (Serial.available() > 0){
     number = Serial.read() - '0';
-    //if (number>=1 && number<=9)
     Serial.println(number);
     flag=0;
   }
 
-  //Valid range is from 1 to 9
-  if (number>=1 && number<=9){//Print number to 7 segment display
+  if (number>=0 && number<=9){
     disp.writeDigit(number);
-    //Print message to serial monito only once
+  }
+  else if(number + '0' == ' ') {
     if (flag==0){ 
-      //Print number to serial monitor
-      //Serial.print("Number on 7 segment display:");
-      //Serial.println(number);
       flag=1;
+      disp.write(' ');
+      //disp.clearDisp();
     }
   }
 }
